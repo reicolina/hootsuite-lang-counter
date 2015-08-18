@@ -1,8 +1,6 @@
 'use strict';
-/**
- * Module dependencies.
- */
 
+// module dependencies
 var express = require('express'),
     Tuiter = require('tuiter'),
     sio = require('socket.io'),
@@ -10,6 +8,7 @@ var express = require('express'),
 
 var app = express();
 
+// app configuration
 app.configure(function () {
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -23,23 +22,23 @@ app.configure(function () {
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
 });
-
 app.configure('development', function () {
   app.use(express.errorHandler());
 });
-
 app.get('/', function (req, res) {
   res.render('index', { title: 'Twitter clients' });
 });
 
+// set up the twitter app keys
 var t = new Tuiter(require('./keys.json'));
 
+// start server
 var server = http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
 });
 
+// set up socket.io
 var io = sio.listen(server);
-
 io.enable('browser client minification');
 io.enable('browser client etag');
 io.enable('browser client gzip');
@@ -52,7 +51,7 @@ io.set('transports', [
     'jsonp-polling'
 ]);
 
-
+// get twitter posts from their API
 t.sample({}, function (stream) {
   var client = {};
   stream.on('tweet', function (data) {

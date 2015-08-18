@@ -10,6 +10,7 @@ var clients = [],
   newVerifiedCount = [],
   chart;
 
+// set up highcharts bar chart
 $(document).ready(function () {
   chart = new Highcharts.Chart({
     chart: {
@@ -39,8 +40,9 @@ $(document).ready(function () {
   });
 
   var socket = io.connect();
-
   var found;
+  
+  // handle the incoming data from the socket
   socket.on('tweet', function (client) {
     found = false;
     for(var i in languages) {
@@ -52,7 +54,6 @@ $(document).ready(function () {
         found = true;
       }
     }
-
     if(!found) {
       languages.push(client.language);
       clients.push({language: client.language, count: 1, verifiedCount: client.isVerified && 1});
@@ -72,10 +73,10 @@ function refresh () {
   chart.redraw();
   newCount = [];
   newVerifiedCount = [];
-
   setTimeout(refresh, 500);
 }
 
+// refresh the view every half a second
 setTimeout(refresh, 500);
 
 })();

@@ -1,4 +1,4 @@
-# Hootsuite Language Distribution Monitor
+# Hootsuite Language Monitor
 
 ![](https://www.dropbox.com/s/t4epqrki373e2f3/hootsuite-counter.png?raw=1)
 

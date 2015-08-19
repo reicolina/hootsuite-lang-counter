@@ -18,7 +18,7 @@ $(document).ready(function () {
       renderTo: 'container'
     },
     title: {
-      text: 'Preferred Language for Latests Tweets posted from Accounts Using Hootsuite'
+      text: 'Preferred Language for Latests Tweets Posted from Accounts Using Hootsuite'
     },
     xAxis: {
         categories: languages,

@@ -11,8 +11,49 @@ body {
   margin: 20px 0;
 }
 
-a {
+p {
   color: #7d7d7d;
+  margin: 30px;
   text-decoration: none;
+}
+
+#wrapper {
+    width: 1005px;
+    margin: 0 auto;
+    position: relative;
+}
+#leftcolumn {
+    width: 100px;
+    min-height: 100px;
+    float: left;
+}
+#rightcolumn {
+    width: 900px;
+    float: right;
+}
+.bubble
+{
+position: relative;
+width: 750px;
+height: 90px;
+padding: 0px;
+background: #F9EADC;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 20px 15px 0;
+border-color: transparent #F9EADC;
+display: block;
+width: 0;
+z-index: 1;
+left: -20px;
+top: 30px;
 }
 

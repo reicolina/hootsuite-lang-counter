@@ -18,7 +18,7 @@ $(document).ready(function () {
       renderTo: 'container'
     },
     title: {
-      text: 'Hootsuite Language Distribution'
+      text: 'Preferred Language for Latests Tweets from Hootsuite'
     },
     xAxis: {
         categories: languages,
@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   var socket = io.connect();
   var found;
-  
+
   // handle the incoming data from the socket
   socket.on('tweet', function (client) {
     found = false;

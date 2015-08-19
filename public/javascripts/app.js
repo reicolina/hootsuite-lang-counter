@@ -20,6 +20,9 @@ $(document).ready(function () {
     title: {
       text: 'Preferred Language for Latests Tweets Posted from Accounts Using Hootsuite'
     },
+    subtitle: {
+      text: '(Real Time Monitoring)'
+    },
     xAxis: {
         categories: languages,
         title: {

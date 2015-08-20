@@ -21,6 +21,7 @@ p {
     width: 1005px;
     margin: 0 auto;
     position: relative;
+    clear: both;
 }
 #leftcolumn {
     width: 100px;

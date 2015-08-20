@@ -21,6 +21,7 @@ p {
     width: 1005px;
     margin: 0 auto;
     position: relative;
+    clear: both;
 }
 #leftcolumn {
     width: 100px;
@@ -38,8 +39,6 @@ width: 750px;
 height: 90px;
 padding: 0px;
 background: #F9EADC;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
 border-radius: 10px;
 }
 

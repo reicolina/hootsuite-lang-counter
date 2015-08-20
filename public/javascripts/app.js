@@ -18,7 +18,10 @@ $(document).ready(function () {
       renderTo: 'container'
     },
     title: {
-      text: 'Preferred Language for Latests Tweets from Hootsuite'
+      text: 'Preferred Language for Latests Tweets Posted from Accounts Using Hootsuite'
+    },
+    subtitle: {
+      text: '(Real Time Monitoring)'
     },
     xAxis: {
         categories: languages,

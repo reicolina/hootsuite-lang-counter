@@ -26,7 +26,7 @@ app.configure('development', function () {
   app.use(express.errorHandler());
 });
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Twitter clients' });
+  res.render('index', { title: 'Hootsuite Language Monitor' });
 });
 
 // set up the twitter app keys
